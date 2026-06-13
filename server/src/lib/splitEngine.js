@@ -63,6 +63,10 @@ function calculateSplits({
     return isMemberActiveOnDate(membership, transactionDate);
   });
 
+  if (activeUserIds.length !== intendedUserIds.length) {
+    throw new Error('One or more split participants were not active roommates during the transaction date.');
+  }
+
   if (activeUserIds.length === 0) {
     throw new Error('No active group members found for this transaction date.');
   }

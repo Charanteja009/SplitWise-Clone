@@ -296,7 +296,7 @@ router.post('/:id/upload-csv', authenticateToken, upload.single('file'), async (
       const rawRow = rows[i];
       const rowIndex = i + 1;
 
-      if (!rawRow.date || !rawRow.amount || !rawRow.paid_by || !rawRow.description) {
+      if (!rawRow.date || !rawRow.amount || !rawRow.paid_by) {
         rejectCount++;
         logs.push({
           rowIndex,
