@@ -72,11 +72,16 @@ export default function SettlementView({ members, netBalances, peerDebts, groupI
           <div className="divide-y divide-slate-100">
             {members.map((m) => {
               const bal = netBalances[m.id] || 0;
+              const joinedDate = new Date(m.joinedAt).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+              const leftDate = m.leftAt ? new Date(m.leftAt).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' }) : null;
               return (
                 <div key={m.id} className="py-4 flex justify-between items-center first:pt-0 last:pb-0">
                   <div>
                     <p className="font-bold text-slate-800">{m.name}</p>
-                    <p className="text-xs text-slate-400 font-medium mt-0.5">{m.email}</p>
+                    <p className="text-xs text-slate-500 font-medium mt-0.5">{m.email}</p>
+                    <p className="text-[10px] text-slate-400 font-semibold mt-1">
+                      Joined: {joinedDate}{leftDate ? ` | Left: ${leftDate}` : ' | Present'}
+                    </p>
                   </div>
                   <span className={`text-base font-black ${bal > 0 ? 'text-slate-900' : bal < 0 ? 'text-slate-400' : 'text-slate-350'}`}>
                     {bal > 0 ? `+₹${bal.toFixed(2)}` : bal < 0 ? `-₹${Math.abs(bal).toFixed(2)}` : 'Settled'}
