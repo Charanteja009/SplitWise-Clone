@@ -1,11 +1,43 @@
-id,date,amount,paid_by,description,currency,split_type,split_with,split_detail
-TX_001,2026-02-15,120.00,Aisha,Weekly Grocery Bill,INR,EQUAL,"Aisha, Rohan, Priya",
-TX_002,2026-02-18,-45.50,Rohan,Taxi Ride Refund,INR,EQUAL,"Rohan, Priya",
-TX_003,2026-07-20,350.00,Priya,Advance Rent Payment,INR,EQUAL,"Rohan, Priya",
-TX_004,2026-02-22,10.00,Aisha,USD Dinner Trip,USD,EQUAL,"Aisha, Rohan, Priya",
-TX_001,2026-02-15,120.00,Aisha,Weekly Grocery Bill (Duplicate Check),INR,EQUAL,"Aisha, Rohan, Priya",
-TX_006,2026-02-28,80.00,Rohan,,INR,EQUAL,"Rohan, Priya",
-TX_007,2026-02-28,200.00,Aisha,Unregistered Roommate Dinner,INR,PERCENTAGE,,"Aisha:50; Rohan:25; UnknownGuy:25"
-TX_008,2026-03-05,150.00,Rohan,Broken Percentage Bill,INR,PERCENTAGE,,"Rohan:50; Priya:40"
-TX_009,2026-03-10,300.00,Priya,Unequal Amount Split Mismatch,INR,UNEQUAL,,"Priya:100.00; Rohan:150.00"
-TX_010,2026-04-10,180.00,Aisha,Post-Residency Split with Meera,INR,EQUAL,"Aisha, Rohan, Meera",
+date,description,paid_by,amount,currency,split_type,split_with,split_detail
+01-02-2026,February rent,Aisha,48000,INR,equal,Aisha;Rohan;Priya;Meera,
+03-02-2026,Groceries,Priya,2340,INR,equal,Aisha;Rohan;Priya;Meera,
+05-02-2026,Wifi bill Feb,Rohan,1199,INR,equal,Aisha;Rohan;Priya;Meera,
+08-02-2026,Dinner at M,Dev,3200,INR,equal,Aisha;Rohan;Priya;Dev,
+08-02-2026,dinner - mi,Dev,3200,INR,equal,Aisha;Rohan;Priya;Dev,
+10-02-2026,Electricity,Aisha,"1,200",INR,equal,Aisha;Rohan;Priya;Meera,
+12-02-2026,Maid salary,Meera,3000,INR,equal,Aisha;Rohan;Priya,
+14-02-2026,Movie night,priya,640,INR,equal,Aisha;Rohan;Priya,
+15-02-2026,Cylinder re,Rohan,899.995,INR,equal,Aisha;Rohan;Priya;Meera,
+18-02-2026,Groceries,Priya S,1875,INR,equal,Aisha;Rohan;Priya;Meera,
+20-02-2026,Aisha birth,Rohan,1500,INR,unequal,Rohan;Priy,Rohan 700
+22-02-2026,House cleaning suppli,,780,INR,equal,Aisha;Rohan;Priya;Me,
+25-02-2026,Rohan paid,Rohan,5000,INR,,Aisha,
+28-02-2026,Pizza Friday,Aisha,1440,INR,percentage,Aisha;Roha,Aisha 30%
+01-03-2026,March rent,Aisha,48000,INR,equal,Aisha;Rohan;Priya;Meera,
+03-03-2026,Groceries,Meera,2810,INR,equal,Aisha;Rohan;Priya;Meera,
+05-03-2026,Wifi bill Ma,Rohan,1199,INR,equal,Aisha;Rohan;Priya;Meera,
+08-03-2026,Goa flights,Aisha,32400,INR,equal,Aisha;Rohan;Priya;Dev,
+09-03-2026,Goa villa bc,Dev,540,USD,equal,Aisha;Rohan;Priya;Dev,
+10-03-2026,Beach shac,Rohan,84,USD,equal,Aisha;Rohan;Priya;Dev,
+10-03-2026,Scooter re,Priya,3600,INR,share,Aisha;Roha,Aisha 1
+11-03-2026,Parasailing,Dev,150,USD,equal,Aisha;Rohan;Priya;Dev,
+11-03-2026,Dinner at T,Aisha,2400,INR,equal,Aisha;Rohan;Priya;Dev,
+11-03-2026,Thalassa di,Rohan,2450,INR,equal,Aisha;Rohan;Priya;Dev,
+12-03-2026,Parasailing,Dev,-30,USD,equal,Aisha;Rohan;Priya;Dev,
+Mar-14,Airport cab,rohan,1100,INR,equal,Aisha;Rohan;Priya;Dev,
+15-03-2026,Groceries,Priya,2105,,equal,Aisha;Rohan;Priya;Me,
+18-03-2026,Electricity,Aisha,1450,INR,equal,Aisha;Rohan;Priya;Meera,
+20-03-2026,Maid salary,Meera,3000,INR,equal,Aisha;Rohan;Priya;Meera,
+22-03-2026,Dinner ord,Priya,0,INR,equal,Aisha;Rohan;Priya;Me,
+25-03-2026,Weekend t,Meera,2200,INR,percentage,Aisha;Roha,Aisha 30%; Rohan 30%; Priya 30%; Meera 20%
+28-03-2026,Meera fare,Aisha,48000,INR,equal,Aisha;Rohan;Priya;Me,
+04-05-2026,Deep clean,Rohan,2500,INR,equal,Aisha;Rohan;Priya,
+01-04-2026,April rent,Aisha,48000,INR,share,Aisha;Roha,Aisha 2; Rohan 1
+02-04-2026,Groceries,Priya,2640,INR,equal,Aisha;Rohan;Priya;Me,
+05-04-2026,Wifi bill Ap,Rohan,1199,INR,equal,Aisha;Rohan;Priya,
+08-04-2026,Sam depos,Sam,15000,INR,equal,Aisha,
+10-04-2026,Housewarr,Sam,3100,INR,equal,Aisha;Rohan;Priya;Sam,
+12-04-2026,Electricity,Aisha,1380,INR,equal,Aisha;Rohan;Priya;Sam,
+15-04-2026,Groceries,Sam,1990,INR,equal,Aisha;Rohan;Priya;Sam,
+18-04-2026,Furniture f,Aisha,12000,INR,equal,Aisha;Roha,Aisha 1; Rohan 1
+20-04-2026,Maid salary,Priya,3000,INR,equal,Aisha;Rohan;Priya;Sam,

@@ -108,7 +108,8 @@ function evaluateAnomaly(row, registeredUserNames, existingExpenseIds, batchSeen
   const rawDescription = row.description;
 
   // 2. Anomaly 2: Zero Amount Check (Hard Fail)
-  const parsedAmount = parseFloat(rawAmount);
+  const cleanedAmountStr = String(rawAmount).replace(/,/g, '').trim();
+  const parsedAmount = parseFloat(cleanedAmountStr);
   if (isNaN(parsedAmount) || parsedAmount === 0) {
     anomalies.push('ZERO_AMOUNT');
     return {
