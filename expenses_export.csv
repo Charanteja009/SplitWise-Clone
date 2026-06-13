@@ -1,0 +1,11 @@
+id,date,amount,paid_by,description,currency,split_type,split_with,split_detail
+TX_001,2026-02-15,120.00,Aisha,Weekly Grocery Bill,INR,EQUAL,"Aisha, Rohan, Priya",
+TX_002,2026-02-18,-45.50,Rohan,Taxi Ride Refund,INR,EQUAL,"Rohan, Priya",
+TX_003,2026-07-20,350.00,Priya,Advance Rent Payment,INR,EQUAL,"Rohan, Priya",
+TX_004,2026-02-22,10.00,Aisha,USD Dinner Trip,USD,EQUAL,"Aisha, Rohan, Priya",
+TX_001,2026-02-15,120.00,Aisha,Weekly Grocery Bill (Duplicate Check),INR,EQUAL,"Aisha, Rohan, Priya",
+TX_006,2026-02-28,80.00,Rohan,,INR,EQUAL,"Rohan, Priya",
+TX_007,2026-02-28,200.00,Aisha,Unregistered Roommate Dinner,INR,PERCENTAGE,,"Aisha:50; Rohan:25; UnknownGuy:25"
+TX_008,2026-03-05,150.00,Rohan,Broken Percentage Bill,INR,PERCENTAGE,,"Rohan:50; Priya:40"
+TX_009,2026-03-10,300.00,Priya,Unequal Amount Split Mismatch,INR,UNEQUAL,,"Priya:100.00; Rohan:150.00"
+TX_010,2026-04-10,180.00,Aisha,Post-Residency Split with Meera,INR,EQUAL,"Aisha, Rohan, Meera",
